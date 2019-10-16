@@ -1,0 +1,19 @@
+.carta-container {
+  border: 1px solid black;
+  margin: 1em 1em 0 0;
+  border-radius: 7px;
+  text-align: center;
+
+}
+.carta-container .row {
+  height: 20vh;
+}
+.card-img {
+  height: 30vh;
+  width: 30vh;
+}
+.cat-gif {
+  width: 30%;
+  height: 30%;
+  border-radius: 5px;
+}
