@@ -12,10 +12,13 @@ class Card extends React.Component {
   }
 
   render() {
+
+    let carta = this.props.carta;
+
     return (
       <div className='col-5 col-md-2 carta-container' onClick={this.flipCard}>
         {
-          this.props.carta.estado === 'oculta' ?
+          carta.estado === 'oculta' ?
           <div className='row align-items-center'>
             <div className='col'>
               <img className='cat-gif' src={gifCat} alt='Gatito gif' />
@@ -23,9 +26,9 @@ class Card extends React.Component {
           </div> :
           <div className='row align-items-center'>
             <div className='col'>
-              {this.props.carta.texto ?
-                this.props.carta.texto :
-                <img className='card-img' src={this.props.carta.imagenUrl} alt='Imagen Carta' /> }
+              {carta.texto ?
+                carta.texto :
+                <img className='card-img' src={carta.imagenUrl} alt='Imagen Carta' /> }
             </div>
           </div>
         }

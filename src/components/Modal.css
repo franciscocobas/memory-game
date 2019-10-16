@@ -1,0 +1,18 @@
+.modal-container {
+  position: absolute;
+}
+
+.modal-container .row {
+  height: 100vh;
+}
+
+.modal-box {
+  background-color: #F7DC6F;
+  z-index: 100;
+  border-radius: 5px;
+  border: 2px solid #ff5733;
+  color: #900c3f;
+}
+.modal-box h1 {
+  cursor: default;
+}
