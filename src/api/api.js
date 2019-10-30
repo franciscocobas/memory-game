@@ -17,7 +17,7 @@ function shuffle(array) {
 function getCards() {
 
   return new Promise((resolve, reject) => {
-    resolve(shuffle(cards))
+    resolve(cards)
   })
 }
 

@@ -6,9 +6,9 @@ import './Card.css'
 
 class Card extends React.Component {
 
-  flipCard = () => {
+  onClickCard = () => {
 
-    this.props.handleClick(this.props.carta);
+    this.props.onClickCard(this.props.carta);
   }
 
   render() {
@@ -16,22 +16,13 @@ class Card extends React.Component {
     let carta = this.props.carta;
 
     return (
-      <div className='col-5 col-md-2 carta-container' onClick={this.flipCard}>
-        {
-          carta.estado === 'oculta' ?
-          <div className='row align-items-center'>
-            <div className='col'>
-              <img className='cat-gif' src={gifCat} alt='Gatito gif' />
-            </div>
-          </div> :
-          <div className='row align-items-center'>
-            <div className='col'>
-              {carta.texto ?
-                carta.texto :
-                <img className='card-img' src={carta.imagenUrl} alt='Imagen Carta' /> }
-            </div>
-          </div>
-        }
+      <div 
+        className='col-5 col-md-2 carta-container' 
+        onClick={this.onClickCard}>
+        { 
+          carta.estado === 'oculta' ? 
+        <div>Oculta</div> :  carta.texto 
+      }
       </div>
     )
   }
